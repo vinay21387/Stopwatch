@@ -1,38 +1,119 @@
-.App {
+.stopwatch {
+  font-family: 'Arial', sans-serif;
   text-align: center;
+  margin: 50px auto;
+  max-width: 400px;
+  background: linear-gradient(135deg, #f06, #f90);
+  padding: 20px;
+  border-radius: 15px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.time-display {
+  font-size: 56px;
+  margin-bottom: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  display: inline-block;
+  min-width: 250px;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.time-display:hover {
+  transform: scale(1.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.controls {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.controls button {
+  padding: 12px 25px;
+  font-size: 18px;
+  margin: 5px;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  background-color: #fff;
+  color: #333;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.controls button:hover {
+  background-color: #f06;
+  color: #fff;
+  transform: translateY(-2px);
 }
+
+.controls button:active {
+  transform: translateY(2px);
+}
+
+.controls button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: #666;
+  box-shadow: none;
+}
+
+.laps {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.laps h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.laps ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.laps li {
+  font-size: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  transition: color 0.2s ease;
+}
+
+.laps li:last-child {
+  border-bottom: none;
+}
+
+.laps li:hover {
+  color: #f06;
+}
+
+
+
+  .time-display {
+    font-size: 40px;
+  }
+
+  .controls button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+
+  .laps h2 {
+    font-size: 22px;
+  }
+
+  .laps li {
+    font-size: 16px;
+  }
+
